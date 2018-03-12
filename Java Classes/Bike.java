@@ -11,13 +11,17 @@ package coursework_01_cps;
  */
 public class Bike extends Vehicle 
 {
-
+    // additional to the genral attribute, uniwue to bike sub class
     private int engineSize;
 
+    //constructor which gathers all the attributes
     public Bike(String type, String idplate, String brand, DateTime entrytime,
             int enginesize) 
     {
+        //set super class with attributes
         super(type, idplate, brand, entrytime);
+        
+        //set sub class attribute
         this.engineSize = enginesize;
     }
 
@@ -31,4 +35,9 @@ public class Bike extends Vehicle
         this.engineSize = engineSize;
     }
 
+    public String toString()
+    {
+        return " "+vehicleType+" "+idPlate+" "+brand+" "+entryTime.toString()+
+                " "+engineSize;
+    }
 }
